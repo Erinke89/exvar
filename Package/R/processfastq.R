@@ -237,7 +237,7 @@ processfastq <- function(file = tools::list_files_with_exts(dir = dir,
                       '_quality_checked_R2.fastq.gz')
       print("Aligning reads...")
       output <- gmapR::gsnap(read1, read2, params = snapParam,
-                      output = paste0(getwd(), "/", foldernames[x]))
+                      output = paste0(getwd(), "/", foldernames[c(2*x)]))
       print("Creating bam file...")
       bamfl <- as(output, "BamFile")
       append(bams, bamfl)
