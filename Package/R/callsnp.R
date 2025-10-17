@@ -31,6 +31,7 @@ callsnp <- function(bam,
   cat("Enable single-chromosome splitting? \nNote: enabling splitting reduces the RAM requirements, but may take longer.")
   mode <- readline("Type [y/n] for [yes/no]: ")
   wd <- getwd()
+  library(VariantAnnotation)
   
   if(mode == "y") {
     ##Sets the reference genome that corresponds to the species chosen by the user
